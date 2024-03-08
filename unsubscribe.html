@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Preferences</title>
+    <style>
+        /* Estilos CSS para personalização */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+        .email-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .subscription {
+            margin-bottom: 20px;
+        }
+        .subscription label {
+            display: block;
+            font-weight: bold;
+        }
+        .subscription p {
+            margin: 0;
+        }
+        .unsubscribe-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .help-link {
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .loader {
+          display: none;
+          transform: translate(-50%, -50%);
+        }
+
+        .loading {
+          border: 2px solid #ccc;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border-top-color: #1ecd97;
+          border-left-color: #1ecd97;
+          animation: spin 1s infinite ease-in;
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Unsubscribe</h1>
+        <p>Qual e-mail deseja tirar do cadastro de formulário?</p>
+        <input type="email" class="email-input" placeholder="Digite seu e-mail">
+        <button onclick="spinner()" class="unsubscribe-btn">Remove subscribe</button>
+        <div class="loader">
+          <div class="loading">
+          </div>
+        </div>
+        <p class="help-link">Entre com contato em caso de problema: contato@augustodotti.com.br</p>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+  function spinner() {
+      document.getElementsByClassName("loader")[0].style.display = "block";
+  }
+</script>   
